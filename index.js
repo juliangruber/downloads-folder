@@ -24,14 +24,16 @@ function darwin () {
 
 function unix () {
   let dir;
-  try { dir = execSync('xdg-user-dir DOWNLOAD', { stdio: [0, 3, 3] }); }
-  catch (_) {}
+  try {
+    dir = execSync('xdg-user-dir DOWNLOAD', { stdio: [0, 3, 3] });
+  } catch (_) {}
   if (dir) return dir;
 
   let stat;
   const homeDownloads = `${process.env.HOME}/Downloads`;
-  try { stat = statSync(homeDownloads); }
-  catch (_) {}
+  try {
+    stat = statSync(homeDownloads);
+  } catch (_) {}
   if (stat) return homeDownloads;
 
   return '/tmp/';
