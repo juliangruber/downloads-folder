@@ -1,8 +1,8 @@
 'use strict';
 
 const os = require('os');
-const {execSync} = require('child_process');
-const {statSync} = require('fs');
+const execSync = require('child_process').execSync;
+const statSync = require('fs').statSync;
 
 module.exports = () => {
   return {
