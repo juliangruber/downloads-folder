@@ -1,13 +1,13 @@
 {
   "name": "downloads-folder",
   "description": "Get the local downloads folder, for all major platforms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "repository": "juliangruber/downloads-folder",
   "devDependencies": {
     "semistandard": "^9.1.0"
   },
   "scripts": {
-    "test": "semistandard"  
+    "test": "semistandard"
   }
 }
