@@ -40,6 +40,6 @@ function unix () {
 }
 
 function windows () {
-  return `${process.env.USERPROFILE}/Downloads`;
+  return `${process.env.USERPROFILE}\\Downloads`;
 }
 
