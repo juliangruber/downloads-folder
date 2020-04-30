@@ -9,6 +9,6 @@
   },
   "types": "types/index.d.ts",
   "scripts": {
-    "test": "semistandard"
+    "test": "semistandard && node example"
   }
 }
