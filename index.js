@@ -39,7 +39,19 @@ function unix () {
   return '/tmp/';
 }
 
-function windows () {
-  return `${process.env.USERPROFILE}\\Downloads`;
+function windows() {
+  const registry = require('registry-js');
+  let folder = `${process.env.USERPROFILE}\\Downloads`;
+  const folders =
+    registry.enumerateValues(
+      registry.HKEY.HKEY_CURRENT_USER,
+      'Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders');
+  for (const value of folders) {
+    if (value.name === '{374DE290-123F-4565-9164-39C4925E467B}') {
+      folder = value.data.replace('%USERPROFILE%', process.env.USERPROFILE);
+      break;
+    }
+  }
+  return folder;
 }
 
