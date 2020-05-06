@@ -5,10 +5,12 @@
   "license": "MIT",
   "repository": "juliangruber/downloads-folder",
   "devDependencies": {
+    "np": "^6.2.3",
     "semistandard": "^9.1.0"
   },
   "types": "types/index.d.ts",
   "scripts": {
+    "release": "np",
     "test": "semistandard && node test"
   },
   "dependencies": {
