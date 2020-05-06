@@ -39,7 +39,7 @@ function unix () {
   return '/tmp/';
 }
 
-function windows() {
+function windows () {
   const registry = require('registry-js');
   let folder = `${process.env.USERPROFILE}\\Downloads`;
   const folders =
