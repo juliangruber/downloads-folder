@@ -1,7 +1,7 @@
 {
   "name": "downloads-folder",
   "description": "Get the local downloads folder, for all major platforms",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "repository": "juliangruber/downloads-folder",
   "devDependencies": {
