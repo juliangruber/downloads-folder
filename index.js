@@ -25,9 +25,9 @@ function darwin () {
 function unix () {
   let dir;
   try {
-    dir = execSync('xdg-user-dir DOWNLOAD', { stdio: [0, 3, 3] });
+    dir = execSync('xdg-user-dir DOWNLOAD');
   } catch (_) {}
-  if (dir) return dir;
+  if (dir && dir !== process.env.HOME) return dir;
 
   let stat;
   const homeDownloads = `${process.env.HOME}/Downloads`;
