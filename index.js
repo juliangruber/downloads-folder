@@ -25,7 +25,7 @@ function darwin () {
 function unix () {
   let dir;
   try {
-    dir = execSync('xdg-user-dir DOWNLOAD').trim();
+    dir = execSync('xdg-user-dir DOWNLOAD', { encoding: 'utf8' }).trim();
   } catch (_) {}
   if (dir && dir !== process.env.HOME) return dir;
 
